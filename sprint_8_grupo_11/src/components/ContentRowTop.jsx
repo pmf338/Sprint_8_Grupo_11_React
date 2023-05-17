@@ -1,10 +1,11 @@
 import React from "react";
 import Imagen from "../assets/images/mandalorian.jpg"
+import ContentRowMovies from "./ContentRowMovies";
 
 function ContentRowTop(){
 
     return(
-        
+        <React.Fragment>
         <div className="container-fluid">
 					<div className="d-sm-flex align-items-center justify-content-between mb-4">
 						<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
@@ -13,8 +14,8 @@ function ContentRowTop(){
 					
 					<div className="row">
 
-						
-						<div className="col-md-4 mb-4">
+						<ContentRowMovies/>
+						{/* <div className="col-md-4 mb-4">
 							<div className="card border-left-primary shadow h-100 py-2">
 								<div className="card-body">
 									<div className="row no-gutters align-items-center">
@@ -63,8 +64,8 @@ function ContentRowTop(){
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
+						</div> */}
+					</div> 
 					
 					
 	
@@ -172,7 +173,7 @@ function ContentRowTop(){
 						</div>
 					</div>
 				</div>
-        
+				</React.Fragment>
     )
 }
 
