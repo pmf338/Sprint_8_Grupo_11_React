@@ -1,4 +1,4 @@
-function Artist(props){
+function Category(props){
     return(
         <>
             <div className="col-lg-6 mb-4">
@@ -12,4 +12,4 @@ function Artist(props){
     )
 }
 
-export default Artist;
+export default Category;

@@ -1,18 +1,18 @@
 import {Component} from 'react';
 
 
-class ArtistsInDb extends Component {
+class CategoriesInDb extends Component {
     constructor(){
         super()
         this.state ={
-            artistsList : []
+            categoriesList : []
         }
     }
     // componentDidMount es un método del ciclo de vida de los componentes de React que se ejecuta automáticamente después de que el componente se haya montado en el DOM (Document Object Model).
     componentDidMount() {
-        fetch('http://localhost:3002/api/dashboardArtists')
+        fetch('http://localhost:3002/api/dashboardCategories')
             .then(respuesta => respuesta.json())
-            .then(artist => this.setState({ artistsList: artist.data }))
+            .then(category => this.setState({ categoriesList: category.data }))
             .catch(error => console.log(error))
         ;
     }
@@ -24,12 +24,11 @@ class ArtistsInDb extends Component {
                 <div className="row no-gutters align-items-center">
                   <div className="col mr-2">
                     <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                      Cantidad de Artistas
+                      Cantidad de Categorias
                     </div>
                     <div className="h5 mb-0 font-weight-bold text-gray-800">
-                      {console.log("artistList",this.state.artistsList)}
-                      
-                     {this.state.artistsList.length}
+                    {console.log("ctegorias",this.state.categoriesList)}
+                     {this.state.categoriesList.length}
                     </div>
                   </div>
                   <div className="col-auto">
@@ -42,4 +41,4 @@ class ArtistsInDb extends Component {
         );
     }
 }
-export default ArtistsInDb;
+export default CategoriesInDb;
