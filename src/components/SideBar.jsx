@@ -1,4 +1,7 @@
 import image from '../assets/images/logo-DH.png';
+import {Route, Link, Routes} from 'react-router-dom';
+import ContentUserWrapper from './ContentUserWrapper';
+import ContentWrapper from './ContentWrapper';
 
 function SideBar(){
     return(
@@ -27,33 +30,31 @@ function SideBar(){
                 <hr className="sidebar-divider"/>
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Actions</div>
+                <div className="sidebar-heading">Lista de usuarios
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="/">
+                    <Link to="/ContentUserWrapper">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
-                    </a>
+                        <span>Usuarios</span>
+                    </Link>
                 </li>
-
-                {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></a>
+                <Link to="/ContentWrapper">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Inicio</span>
+                    </Link>
                 </li>
-
-                {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></a>
-                </li>
+                </div>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
+
+            <Routes>
+                <Route path= "/ContentUserWrapper" element={<ContentUserWrapper/>} />
+                <Route path= "/ContentWrapper" element={<ContentWrapper/>} />
+            </Routes>
             {/*<!-- End of Sidebar -->*/}
             
         </>
