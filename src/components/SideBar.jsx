@@ -34,17 +34,19 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
+                <Link to="/">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Inicio</span>
+                    </Link>
+                </li>
+                
+                <li className="nav-item">
                     <Link to="/ContentUserWrapper">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>Usuarios</span>
                     </Link>
                 </li>
-                <li className="nav-item">
-                <Link to="/ContentWrapper">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <span>Inicio</span>
-                    </Link>
-                </li>
+
                 </div>
 
                 {/*<!-- Divider -->*/}
@@ -52,8 +54,8 @@ function SideBar(){
             </ul>
 
             <Routes>
-                <Route path= "/ContentUserWrapper" element={<ContentUserWrapper/>} />
-                <Route path= "/ContentWrapper" element={<ContentWrapper/>} />
+            <Route path= "/" element={<ContentWrapper/>} />
+            <Route path= "/ContentUserWrapper" element={<ContentUserWrapper/>} />
             </Routes>
             {/*<!-- End of Sidebar -->*/}
             

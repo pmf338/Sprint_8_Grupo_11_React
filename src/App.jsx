@@ -1,15 +1,15 @@
 import Sidebar from './components/SideBar';
 import ContentWrapper from './components/ContentWrapper';
-import {Route, Link, Routes} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <div id="wrapper">
         <Sidebar />
-        <ContentWrapper />
+        {/* <ContentWrapper /> */}
       </div>
-    </>
+    </BrowserRouter>
   )
 }
 
