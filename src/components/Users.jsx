@@ -7,7 +7,6 @@ function User(props){
             <td>{props.userName}</td>
             <td>{props.email}</td>
             <td>{props.address}</td>
-            <td>{props.imageProfile}</td>
         </tr>
         </>
     )

@@ -36,7 +36,6 @@ class ContentUserWrapper extends Component {
 										<th>Nombre de usuario</th>
 										<th>Email</th>
                                         <th>Dirección</th>
-                                        <th>Imagen de perfil</th>
 									</tr>
 								</thead>
 						

@@ -5,7 +5,6 @@ function Products(props) {
             <td>{props.name}</td>
             <td>{props.price}</td>
             <td>{props.quantity}</td>
-            <td>{props.artist_id}</td>
         </tr>
     )
 }

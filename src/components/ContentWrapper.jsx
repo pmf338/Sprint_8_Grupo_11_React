@@ -12,6 +12,7 @@ function ContentWrapper(){
                 <div id="content">
                     <TopBar />
                     <ContentRowTop />
+                    {/* <ContentCategoriesWrapper /> */}
                     <ProductsList/>
                     <Footer />
                 </div>

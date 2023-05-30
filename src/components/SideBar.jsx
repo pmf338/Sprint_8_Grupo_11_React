@@ -1,7 +1,7 @@
-import image from '../assets/images/logo-DH.png';
 import {Route, Link, Routes} from 'react-router-dom';
 import ContentUserWrapper from './ContentUserWrapper';
 import ContentWrapper from './ContentWrapper';
+import ContentCategoriesWrapper from './ContentCategoriesWrapper';
 
 function SideBar(){
     return(
@@ -10,11 +10,11 @@ function SideBar(){
             <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <Link to="/" className="sidebar-brand d-flex align-items-center justify-content-center">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="w-100" src="" alt="Rocket Music"/>
                     </div>
-                </a>
+                </Link>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider my-0"/>
@@ -23,27 +23,21 @@ function SideBar(){
                 <li className="nav-item active">
                     <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></a>
+                        <span>Dashboard - Rocket Music</span></a>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider"/>
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Lista de usuarios
+                <div className="sidebar-heading">Indice
 
                 {/*<!-- Nav Item - Pages -->*/}
-                <li className="nav-item">
-                <Link to="/">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <span>Inicio</span>
-                    </Link>
-                </li>
                 
                 <li className="nav-item">
                     <Link to="/ContentUserWrapper">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Usuarios</span>
+                        <span>Lista de usuarios</span>
                     </Link>
                 </li>
 
@@ -56,6 +50,7 @@ function SideBar(){
             <Routes>
             <Route path= "/" element={<ContentWrapper/>} />
             <Route path= "/ContentUserWrapper" element={<ContentUserWrapper/>} />
+            <Route path= "/ContentCategoriesWrapper/:id" element={<ContentCategoriesWrapper/>} />
             </Routes>
             {/*<!-- End of Sidebar -->*/}
             

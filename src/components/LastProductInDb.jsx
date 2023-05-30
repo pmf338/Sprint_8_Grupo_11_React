@@ -1,11 +1,11 @@
 import {Component} from 'react';
 
-
 class LastProductInDb extends Component {
+
     constructor(){
         super()
         this.state ={
-            product : {}
+            product : []
         }
     }
     // componentDidMount es un método del ciclo de vida de los componentes de React que se ejecuta automáticamente después de que el componente se haya montado en el DOM (Document Object Model).
@@ -30,10 +30,18 @@ class LastProductInDb extends Component {
                     <div className="card-body">
                         <div className="text-center">
                             
-                            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src="" alt=" Imagen del producto "></img>
                         </div>
+                       
+                        <span className="mr-2 d-none d-lg-inline text-gray-600 small">Nombre</span>
                         <p>{this.state.product.name}</p>
+                        <span className="mr-2 d-none d-lg-inline text-gray-600 small">Descripción</span>
                         <p>{this.state.product.description}</p>
+                        <span className="mr-2 d-none d-lg-inline text-gray-600 small">Precio</span>
+                        <p>{this.state.product.price}</p>
+                        <span className="mr-2 d-none d-lg-inline text-gray-600 small">Sku</span>
+                        <p>{this.state.product.sku}</p>
+                        <span className="mr-2 d-none d-lg-inline text-gray-600 small">Cantidad</span>
+                        <p>{this.state.product.quantity}</p>
                         
                         
                     </div>
